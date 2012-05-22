@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Audio Player</title>
+<script src="includes/swfobject.js" type="text/javascript"></script>
+
+<style type="text/css">
+	body{ font-family:Arial, Helvetica, sans-serif; font-size:12px; margin:20px; }
+	a { color: #1864AF; text-decoration:none; }
+	a:hover { text-decoration:none; }
+</style>
+
+</head>
+
+<body>
+<h2>Audio Player</h3>
+<hr />
+<div id="mp3player"></div>
+<script type="text/javascript">
+	var so = new SWFObject("audio_player.swf", "swfplayer", "400", "27", "4", "#FFFFFF");
+	so.addVariable("mp3", "Windows-Shutdown.mp3");
+	so.addVariable("autoplay","true");
+	so.addVariable("effect","false");
+	so.addVariable("backcolor","FFFFFF");
+	so.addVariable("frontcolor","1864AF");
+	so.addVariable("fullscreen","false");
+	so.addParam("allowFullScreen","true");
+	so.write("mp3player");
+</script>
+
+</body>
+</html>
